@@ -321,13 +321,10 @@ SQL;
                     } else {
                         $pcolumns = $this->prepareColumns($pcolumns);
                         $prows    = $this->prepareData($prepared_data);
-
                         $this->prepareFile(['columns' => $pcolumns, 'rows' => $prows]);
-
-                        return self::EXIT_CODE_NORMAL;
-
+                        
+                        continue;
                     }
-                    // return self::EXIT_CODE_ERROR;
                 }
             }
         }
